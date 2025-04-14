@@ -1,0 +1,15 @@
+﻿CraterHandler handler = new();
+handler.ReadCraters();
+Console.WriteLine("Craters in list: " + handler.CountCraters);
+Console.WriteLine("Enter a crater name:");
+string inputForDetails = Console.ReadLine();
+Console.WriteLine(handler.GetCraterDetails(inputForDetails));
+Console.WriteLine(handler.LargestCrater());
+Console.WriteLine("Enter a crater name to check for non-overlapping craters:");
+string inputForNotOvrlapping = Console.ReadLine();
+Console.WriteLine(handler.NotOverlapping(inputForNotOvrlapping));
+Console.WriteLine(handler.Includes());
+handler.WriteCratersToTxt();
+Console.WriteLine("Craters written to terulet.txt");
+Console.WriteLine("Extra:");
+Console.WriteLine(handler.OrderByAreaDescending());

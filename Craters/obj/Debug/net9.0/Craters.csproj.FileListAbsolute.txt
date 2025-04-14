@@ -1,0 +1,14 @@
+C:\Users\harci\Desktop\craters\Craters\bin\Debug\net9.0\Craters.exe
+C:\Users\harci\Desktop\craters\Craters\bin\Debug\net9.0\Craters.deps.json
+C:\Users\harci\Desktop\craters\Craters\bin\Debug\net9.0\Craters.runtimeconfig.json
+C:\Users\harci\Desktop\craters\Craters\bin\Debug\net9.0\Craters.dll
+C:\Users\harci\Desktop\craters\Craters\bin\Debug\net9.0\Craters.pdb
+C:\Users\harci\Desktop\craters\Craters\obj\Debug\net9.0\Craters.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\harci\Desktop\craters\Craters\obj\Debug\net9.0\Craters.AssemblyInfoInputs.cache
+C:\Users\harci\Desktop\craters\Craters\obj\Debug\net9.0\Craters.AssemblyInfo.cs
+C:\Users\harci\Desktop\craters\Craters\obj\Debug\net9.0\Craters.csproj.CoreCompileInputs.cache
+C:\Users\harci\Desktop\craters\Craters\obj\Debug\net9.0\Craters.dll
+C:\Users\harci\Desktop\craters\Craters\obj\Debug\net9.0\refint\Craters.dll
+C:\Users\harci\Desktop\craters\Craters\obj\Debug\net9.0\Craters.pdb
+C:\Users\harci\Desktop\craters\Craters\obj\Debug\net9.0\Craters.genruntimeconfig.cache
+C:\Users\harci\Desktop\craters\Craters\obj\Debug\net9.0\ref\Craters.dll

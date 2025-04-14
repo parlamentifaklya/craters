@@ -1,0 +1,15 @@
+public class CraterHandler
+{
+    public List<Crater> craters { get; private set; } = new List<Crater>();
+    public CraterHandler() { }
+    public void ReadCraters() => craters.AddRange(File.ReadLines("felszin_tpont.txt").Select(line => new Crater(line)));
+    public int CountCraters { get => craters.Count; }
+    public string GetCraterDetails(string input) => craters.Find(x => x.CraterName == input) is Crater res ? $"Crater Name: {res.CraterName}, X: {res.XCord}, Y: {res.YCord}, Radius: {res.Radius}" : "No crater Found";
+    public string LargestCrater() => $"The largest crater: {craters.OrderByDescending(c => c.Radius).First().CraterName}, Radius: {craters.Max(c => c.Radius)}";
+    public static double Distance(Crater a, Crater b) => Math.Sqrt(Math.Pow(a.XCord - b.XCord, 2) + Math.Pow(a.YCord - b.YCord, 2));
+    public static double Distance(double x1, double y1, double x2, double y2) => Distance(new Crater($"{x1}\t{y1}\t0\tCula"), new Crater($"{x2}\t{y2}\t0\tCuli"));
+    public string NotOverlapping(string input) => string.Join(", ", craters.Where(k => k.CraterName != input && Math.Sqrt(Math.Pow(k.XCord - craters.FirstOrDefault(t => t.CraterName == input).XCord, 2) + Math.Pow(k.YCord - craters.FirstOrDefault(t => t.CraterName == input).YCord, 2)) > k.Radius + craters.FirstOrDefault(t => t.CraterName == input).Radius).Select(k => k.CraterName));
+    public string Includes() => string.Join(", ", craters.SelectMany((k1, i) => craters.Skip(i + 1).Where(k2 => Math.Sqrt(Math.Pow(k1.XCord - k2.XCord, 2) + Math.Pow(k1.YCord - k2.YCord, 2)) < k1.Radius - k2.Radius).Select(k2 => $"{k1.CraterName} tartalmazza {k2.CraterName}-et")).Distinct());
+    public void WriteCratersToTxt() => File.WriteAllLines("terulet.txt", craters.Select(k => $"{k.Area}\t{k.CraterName}"));
+    public string OrderByAreaDescending() => string.Join("\n", craters.OrderByDescending(k => k.Area).Select(k => $"{k.Area}\t{k.CraterName}"));
+}
